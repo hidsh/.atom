@@ -1,0 +1,66 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+        "spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/apm-install-dir-11841-26625-189v2kk.5mahalwhfr"
+    ]
+  ],
+  "_from": "../d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+  "_id": "recent-finder@0.5.1",
+  "_inCache": true,
+  "_location": "/recent-finder",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+    "spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+  "_shasum": "6c25be9678b74a4ed8f7bf80740e9159c0d04f49",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11841-26625-osbg33.bjvrwo2yb9/package.tgz",
+  "_where": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/apm-install-dir-11841-26625-189v2kk.5mahalwhfr",
+  "bugs": {
+    "url": "https://github.com/t9md/atom-recent-finder/issues"
+  },
+  "dependencies": {
+    "fs-plus": "^2.7.1",
+    "underscore-plus": "^1.6.6"
+  },
+  "description": "Open recent file with fizzy-finder",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/t9md/atom-recent-finder#readme",
+  "keywords": [
+    "recent",
+    "mru"
+  ],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "recent-finder",
+  "optionalDependencies": {},
+  "readme": "# recent-finder [![Build Status](https://travis-ci.org/t9md/atom-recent-finder.svg?branch=master)](https://travis-ci.org/t9md/atom-recent-finder)\n\nOpen recent file with fuzzy-finder.\n\n![gif](https://raw.githubusercontent.com/t9md/t9md/27c7505aab5668880e8d1c11ec3a1864cc0555ba/img/atom-recent-finder.gif)\n\n# Configuration\n\nNo default keymap.  \nYou need to configure keymap in you `keymap.cson`.  \n\ne.g.\n\n```coffeescript\n# Since both `cmd-p` and `cmd-t` are mapped to\n# `fuzzy-finder:toggle-file-finder` by default.\n# I use `cmd-p` for this.\n'atom-workspace:not([mini])':\n  'cmd-p': 'recent-finder:toggle'\n```\n\n# Commands\n\n- `recent-finder:toggle`: Toggle recent-finder\n- `recent-finder:clear`: Clear history\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t9md/atom-recent-finder.git"
+  },
+  "version": "0.5.1"
+}

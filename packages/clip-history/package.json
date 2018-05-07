@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+        "spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/apm-install-dir-11843-96662-mytpcq.ym6byy14i"
+    ]
+  ],
+  "_from": "../d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+  "_id": "clip-history@0.5.0",
+  "_inCache": true,
+  "_location": "/clip-history",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+    "spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+  "_shasum": "bcdae8d95716377597dd33faa7b573f2cf0bacc5",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-11843-96662-p1xloh.mh1ym8to6r/package.tgz",
+  "_where": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/apm-install-dir-11843-96662-mytpcq.ym6byy14i",
+  "bugs": {
+    "url": "https://github.com/t9md/atom-clip-history/issues"
+  },
+  "configSchema": {
+    "max": {
+      "order": 0,
+      "type": "integer",
+      "default": 10,
+      "minimum": 1,
+      "description": "Number of history to remember"
+    },
+    "flashOnPaste": {
+      "order": 1,
+      "type": "boolean",
+      "default": true,
+      "description": "Flash when pasted"
+    },
+    "adjustIndent": {
+      "order": 2,
+      "type": "boolean",
+      "default": true,
+      "description": "Keep layout of pasted text by adjusting indentation."
+    },
+    "doNormalPasteWhenMultipleCursors": {
+      "order": 3,
+      "type": "boolean",
+      "default": true,
+      "description": "Keep layout of pasted text by adjusting indentation."
+    }
+  },
+  "dependencies": {},
+  "description": "Paste from clipboard history like emacs' kill-ring",
+  "devDependencies": {
+    "prettier": "^1.9.2"
+  },
+  "engines": {
+    "atom": "^1.13.0-beta1"
+  },
+  "homepage": "https://github.com/t9md/atom-clip-history#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "clip-history",
+  "optionalDependencies": {},
+  "readme": "# clip-history [![Build Status](https://travis-ci.org/t9md/atom-clip-history.svg)](https://travis-ci.org/t9md/atom-clip-history)\n\nPaste from clipboard history like emacs' kill-ring\n\n![gif](https://raw.githubusercontent.com/t9md/t9md/8c161f165a9caa86021a25c3e91c80dfa559ff2e/img/atom-toggle.gif)\n\n# How to use\n\n1. Paste clipboard entry by `clip-history:paste`\n2. Continue `clip-history:paste` until you get entry you want.\n3. (optional) when you get passed the text you wanted to paste, use `clip-history:paste-newer`.\n4. (optional) you can paste last pasted text with `clip-history:paste-last`.\n\n# Commands\n\n* `clip-history:paste`: Paste. Continuous execution without moving cursor pops older entry.\n* `clip-history:paste-newer`: Paste. Continuous execution without moving cursor pops newer entry.\n* `clip-history:paste-last`: Paste last pasted text.\n* `clip-history:clear`: Clear clipboard history.\n\n# Keymap\n\nNo keymap by default.\n\ne.g.\n\n```coffeescript\n'atom-text-editor:not([mini])':\n  'ctrl-y': 'clip-history:paste'\n  'cmd-y': 'clip-history:paste-newer'\n  'ctrl-Y': 'clip-history:paste-last'\n```\n\n# Modify flash duration\n\nFrom v0.3.0, `flashDurationMilliSeconds` config was removed to use better flashing animation by CSS keyframe. Default\nduration is one second, if you want this shorter, modify your `style.less`.\n\n```less\natom-text-editor.editor .clip-history-pasted .region {\n  // default is 1s, you can tweak in the range from 0 to 1s(maximum).\n  animation-duration: 0.5s;\n}\n```\n\n# Features\n\n* Paste old clipboard entry.\n* Keep multi-line text layout on past by adjusting leading white-spaces of each line(enabled by default).\n* Flash pasted area.\n* Support multiple cursor(disabled by default).\n\n# Similar packages\n\n* [kill-ring](https://atom.io/packages/kill-ring)\n* [clipboard-plus](https://atom.io/packages/clipboard-plus)\n* [clipboard-history](https://atom.io/packages/clipboard-history)\n\n# TODO\n\n* [x] Configurable flash duration.\n* [x] Multi cursor support\n* [x] Use marker instead of range to track original range in multi cursor situation.\n* [x] Adjust proceeding space to keep layout.\n* [x] Sync system's clipboard update.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t9md/atom-clip-history.git"
+  },
+  "version": "0.5.0"
+}

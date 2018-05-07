@@ -1,0 +1,32 @@
+"*":
+  "advanced-open-file":
+    createFileInstantly: true
+  "atomic-emacs": {}
+  "block-cursor":
+    global:
+      blinkOff:
+        backgroundColor: "#ff9300"
+        borderColor: "#764502"
+  core:
+    automaticallyUpdate: false
+    disabledPackages: [
+      "recent-finder"
+    ]
+    packagesWithKeymapsDisabled: [
+      "emacs-plus"
+    ]
+    telemetryConsent: "no"
+  "cursor-history":
+    searchAllPanes: false
+  "exception-reporting":
+    userId: "24c7c729-7d66-4419-858a-285696eca4e0"
+  "vim-mode-plus":
+    autoDisableInputMethodWhenLeavingInsertMode: true
+    automaticallyEscapeInsertModeOnActivePaneItemChange: true
+    useSmartcaseForSearch: true
+    useSmartcaseForSearchCurrentWord: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    removeTrailingWhitespace: false
