@@ -31,9 +31,9 @@
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#configuring-with-cson
 
-# unbindings  
 'atom-workspace atom-text-editor':
   'cmd-h': 'unset!'  
+  'cmd-d': 'unset!'  
   'ctrl-o': 'unset!'  
   'ctrl-x ctrl-o': 'unset!'
 
@@ -44,14 +44,18 @@
 'atom-text-editor.vim-mode-plus.insert-mode':
   'j j': 'vim-mode-plus:activate-normal-mode'
 
-'atom-text-editor.vim-mode-plus.normal-mode':
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
   ']': 'bracket-matcher:go-to-matching-bracket'
   'p': 'clip-history:paste'
+  'ctrl-d': 'unset!'
 # 'cmd-y': 'clip-history:paste-newer'
 # 'ctrl-Y': 'clip-history:paste-last'  
-
+  'space space': 'vim-mode-plus:scroll-full-screen-down'
+  'shift-space shift-space': 'vim-mode-plus:scroll-full-screen-up'
+  
 # next-tab, prev-tab
 'body':
+  'ctrl-d': 'unset!'
   'f12': 'pane:show-next-item'
   'f11': 'pane:show-previous-item'
   

@@ -18,6 +18,8 @@
     telemetryConsent: "no"
   "cursor-history":
     searchAllPanes: false
+  editor:
+    fontSize: 12
   "exception-reporting":
     userId: "24c7c729-7d66-4419-858a-285696eca4e0"
   "vim-mode-plus":
