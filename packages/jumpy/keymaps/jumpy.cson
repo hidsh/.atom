@@ -1,0 +1,20 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+'atom-workspace atom-text-editor:not(.mini),
+.tree-view':
+    'shift-enter': 'jumpy:toggle'
+
+'atom-workspace atom-text-editor.jumpy-jump-mode.jumpy-more-specific1.jumpy-more-specific2,
+.tree-view.jumpy-jump-mode.jumpy-more-specific1.jumpy-more-specific2':
+    'backspace': 'jumpy:reset'
+    'enter': 'jumpy:clear'
+    'space': 'jumpy:clear'
+    'escape': 'jumpy:clear'
+    'shift-enter': 'jumpy:clear'

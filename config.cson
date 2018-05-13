@@ -1,6 +1,9 @@
 "*":
   "advanced-open-file":
     createFileInstantly: true
+  "atom-beautify":
+    c:
+      default_beautifier: "clang-format"
   "atomic-emacs": {}
   "block-cursor":
     global:
@@ -11,6 +14,21 @@
     automaticallyUpdate: false
     disabledPackages: [
       "recent-finder"
+      "advanced-open-file"
+      "atomic-emacs"
+      "cursor-history"
+      "indent-guide-improved"
+      "linter-erb"
+      "linter-rails-best-practices"
+      "linter-ruby"
+      "linter-ui-default"
+      "narrow"
+      "script"
+      "language-php"
+      "language-perl"
+      "language-mustache"
+      "language-less"
+      "language-typescript"
     ]
     packagesWithKeymapsDisabled: [
       "emacs-plus"
@@ -19,9 +37,15 @@
   "cursor-history":
     searchAllPanes: false
   editor:
-    fontSize: 12
+    invisibles: {}
+    showInvisibles: true
+    softTabs: false
+    tabLength: 4
+    tabType: "hard"
+    zoomFontWhenCtrlScrolling: true
   "exception-reporting":
     userId: "24c7c729-7d66-4419-858a-285696eca4e0"
+  github: {}
   "vim-mode-plus":
     autoDisableInputMethodWhenLeavingInsertMode: true
     automaticallyEscapeInsertModeOnActivePaneItemChange: true

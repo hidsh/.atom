@@ -1,0 +1,82 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+        "spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/apm-install-dir-118413-8332-qx8zzu.tqkg2v5cdi"
+    ]
+  ],
+  "_from": "../d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+  "_id": "jumpy@4.2.0",
+  "_inCache": true,
+  "_location": "/jumpy",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+    "spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+  "_shasum": "fe8257f8bd10af17a43211e0dccdba2073815bb1",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/d-118413-8332-1qav6mn.mk50q6ko6r/package.tgz",
+  "_where": "/private/var/folders/8x/dx1r2yrd7wb2fsk0bw3pk96r0000gn/T/apm-install-dir-118413-8332-qx8zzu.tqkg2v5cdi",
+  "bugs": {
+    "url": "https://github.com/DavidLGoldberg/jumpy/issues"
+  },
+  "dependencies": {
+    "javascript-state-machine": "2.4.0",
+    "lodash": "2.4.1",
+    "space-pen": "^4.2.2"
+  },
+  "description": "An Atom package that creates dynamic hotkeys to jump around files across visible panes.",
+  "devDependencies": {
+    "@types/atom": "0.0.38",
+    "@types/javascript-state-machine": "2.4.1",
+    "@types/lodash": "4.14.77",
+    "typescript": "2.5.3"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/DavidLGoldberg/jumpy#readme",
+  "keywords": [
+    "hotkey",
+    "hotkeys",
+    "key bindings",
+    "cursor",
+    "jump",
+    "panes",
+    "shortcuts",
+    "navigation",
+    "productivity",
+    "mouseless",
+    "plugin",
+    "extension"
+  ],
+  "license": "MIT",
+  "main": "./dist/jumpy",
+  "name": "jumpy",
+  "optionalDependencies": {},
+  "readme": "# Jumpy\n\n[![Join the chat at https://gitter.im/jumpy-atom/Lobby](https://badges.gitter.im/jumpy-atom/Lobby.svg)](https://gitter.im/jumpy-atom/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)\n![](https://img.shields.io/apm/dm/jumpy.svg)\n![](https://img.shields.io/apm/v/jumpy.svg)\n[![Build Status](https://travis-ci.org/DavidLGoldberg/jumpy.svg?branch=master)](https://travis-ci.org/DavidLGoldberg/jumpy)\n\nAn Atom package that creates dynamic hotkeys to jump around files and across visible panes.\n\n## How to jump\n\n1.  Hit <kbd>shift</kbd> + <kbd>enter</kbd>\n2.  Choose from your presented labels:\n3.  Enter two characters.\n4.  Keep coding!\n\n[ ![Jumpy in Action! - (gif made with recordit.co)][1]](https://raw.githubusercontent.com/DavidLGoldberg/jumpy/master/_images/jumpy.gif)\n\n[1]: https://raw.githubusercontent.com/DavidLGoldberg/jumpy/master/_images/jumpy.gif\n\n## Install\nOn command line:\n```\napm install jumpy\n```\n\n## Notes\n\n*   Works great with or without [vim-mode](https://github.com/atom/vim-mode \"vim-mode's Homepage\") or [vim-mode-plus](https://atom.io/packages/vim-mode-plus \"vim-mode-plus's Homepage\")!\n  *   Vim modes supported:\n      *   command mode\n      *   insert mode\n      *   visual mode (expands selections with <kbd>v</kbd> or <kbd>V</kbd>)\n  *   Recommended key mappings to replace 'f' in vim-mode see 'Settings' below.\n\n## Key Bindings\n\n### Defaults\n\n*   Enter jump mode\n    *   <kbd>shift</kbd> + <kbd>enter</kbd>\n    _**NOTE:** This particular hotkey conflicts with the very awesome [Hydrogen package](https://nteract.io/atom).\n    Please rebind jump mode to something else or override it for Jumpy (see below)_\n*   Reset first character entered\n    *   <kbd>backspace</kbd>\n*   Cancel/exit jump mode (any)\n    *   <kbd>shift</kbd> + <kbd>enter</kbd>\n    *   <kbd>enter</kbd>\n    *   <kbd>esc</kbd>\n    *   <kbd>space</kbd>\n\n## Settings\n\n### Jumpy preferences\n\n( Preferences <kbd>cmd</kbd>+<kbd>,</kbd> ) -> search for 'jumpy'\n\n*   **Font Size**:\nIf set, must be a decimal value less than 1.\n*   **High Contrast**:\nIf checked, uses a more colorful and fun (usually green) label.\n*   **Match Pattern**:\nProvide a custom regex to match labels with.\n*   **Use Homing Beacon Effect On Jumps**:\nIf left on, will display a homing beacon (usually red) after all jumps.\n\n![Jumpy settings](https://raw.githubusercontent.com/DavidLGoldberg/jumpy/master/_images/jumpy-settings.png)\n\n*Example*:\n\n![Jumpy example](https://raw.githubusercontent.com/DavidLGoldberg/jumpy/master/_images/jumpy-high-contrast-font-camel.png)\n\n(image after settings set to .85 font size, high contrast, and default camel case matching pattern)\n\n### 'vim-mode/vim-mode-plus' Users (Strongly Recommended Override)\n\nPut this override in your **'Atom'** -> **'Keymap...'** settings:\n\n    'atom-text-editor:not(.mini).vim-mode:not(.insert-mode):not(.jumpy-jump-mode), .tree-view':\n        'f': 'jumpy:toggle'\n\nor if `vim-mode-plus`:\n\n    'atom-text-editor:not(.mini).vim-mode-plus:not(.insert-mode):not(.jumpy-jump-mode), .tree-view':\n        'f': 'jumpy:toggle'\n\nThis will **bind 'f' to toggle Jumpy**.\n\nThis is not the default because it **changes vim's native behavior**.\nInstead, with Jumpy, after jumping to the nearest word, you can easily word or character jump over to your target.\nThe [Vimium chrome extension](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb?hl=en) chose this binding.\nPlease let me know what you think about this binding for Jumpy [here](https://discuss.atom.io/t/introducing-jumpy-new-package/10980/28)!\n\n### 'hydrogen' Users\nIf you want to use the original keybinding for Jumpy it's <kbd>shift</kbd>+<kbd>enter</kbd>.  Hydrogen overrides this to simulate the Jupyter notebook behavior.\nPut this override in your **'Atom'** -> **'Keymap...'** settings:\n\n    'atom-workspace atom-text-editor:not(.mini)':\n        'shift-enter': 'jumpy:toggle'\n\n_This is less necessary for vim-mode users because of above binding, although setting up a binding like this will allow jumps from insert mode as well!_\n\n### Jumpy Styles\n\nNote: Styles can be overridden in **'Atom' -> 'Open Your Stylesheet'**\n(see examples below)\n\n```less\natom-text-editor {\n    .jumpy-label {\n        // Regular labels\n        background-color: black;\n        color: white;\n        &.high-contrast {\n            // High Contrast labels (activated in settings)\n            background-color: green;\n        }\n    }\n}\n```\n\n## My other Atom package :)\n\n*   [Qolor](https://atom.io/packages/qolor)\n\n## Keywords\n\n(A little SEO juice)\n\n*   Shortcuts\n*   Navigation\n*   Productivity\n*   Mouseless\n*   Plugin\n*   Extension\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidLGoldberg/jumpy.git"
+  },
+  "version": "4.2.0"
+}

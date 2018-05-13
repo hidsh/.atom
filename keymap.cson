@@ -36,7 +36,11 @@
   'cmd-d': 'unset!'  
   'ctrl-o': 'unset!'  
   'ctrl-x ctrl-o': 'unset!'
-
+  
+  
+'.platform-darwin, .platform-darwin .command-palette atom-text-editor':
+  'cmd-x': 'command-palette:toggle'
+  
 # vim-mode-plus
 'atom-text-editor[mini]':
   'j j': 'core:cancel'
@@ -52,23 +56,35 @@
 # 'ctrl-Y': 'clip-history:paste-last'  
   'space space': 'vim-mode-plus:scroll-full-screen-down'
   'shift-space shift-space': 'vim-mode-plus:scroll-full-screen-up'
+  'j': 'vim-mode-plus:move-down-screen'
+  'k': 'vim-mode-plus:move-up-screen'
+  'f': 'jumpy:toggle'
   
-# next-tab, prev-tab
+  
 'body':
+  'alt-cmd-h': 'unset!'
+  'cmd-h': 'unset!'
   'ctrl-d': 'unset!'
   'f12': 'pane:show-next-item'
   'f11': 'pane:show-previous-item'
   
-# split window and ..
-#'atom-workspace':
-#  'ctrl-0': 'pane:close'  
-#  'ctrl-o': 'pane:split-right'
-#  'ctrl-x o': 'window:focus-next-pane'  
+'.platform-darwin atom-text-editor':
+  'cmd-right': 'symbols-view:go-to-declaration'# split window and ..
+  'cmd-left': 'symbols-view:return-from-declaration'
+
+
+'atom-workspace':
+  'ctrl-0': 'pane:close'  
+  'ctrl-o': 'pane:split-right'
+  'ctrl-x o': 'window:focus-next-pane'  
   
 # clip-history (kill ring)
 'atom-text-editor:not([mini])':
   'ctrl-y': 'clip-history:paste'
   'cmd-y': 'clip-history:paste-newer'
   'ctrl-Y': 'clip-history:paste-last'  
+  
+ '.platform-darwin, .platform-win32, .platform-linux':
+  'ctrl-g': 'unset!' 
   
   
